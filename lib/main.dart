@@ -13,10 +13,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<AppCubit>(
-      create: (context) => AppCubit()..getNws(),
+      create: (context) =>
+      AppCubit()
+        ..getNws(),
       child: MaterialApp(
         home: HomeScreen(),
       ),
     );
   }
-}
+}//HAzem
