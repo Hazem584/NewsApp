@@ -1,0 +1,1 @@
+import 'package:newsapp/model/artical.dart';class AppState {}class InitialState extends AppState {}class LoadingState extends AppState {}class ErrorState extends AppState {  final String errorMessage;  ErrorState({required this.errorMessage});}class LoadedState extends AppState {final List<ArticalModel> x;  LoadedState({required this.x});}

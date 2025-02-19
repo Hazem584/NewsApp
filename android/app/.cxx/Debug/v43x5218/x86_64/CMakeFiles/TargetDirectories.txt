@@ -1,0 +1,2 @@
+C:/Users/HAZEM MOHAMED/AndroidStudioProjects/NewsApp/android/app/.cxx/Debug/v43x5218/x86_64/CMakeFiles/edit_cache.dir
+C:/Users/HAZEM MOHAMED/AndroidStudioProjects/NewsApp/android/app/.cxx/Debug/v43x5218/x86_64/CMakeFiles/rebuild_cache.dir

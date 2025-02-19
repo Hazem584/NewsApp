@@ -1,16 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/model/category.dart';
+import 'package:newsapp/screens/category_deatal.dart';
+
 class CategoryNews extends StatelessWidget {
-  const CategoryNews({super.key});
+  final Category x;
+
+  const CategoryNews({super.key, required this.x});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
-      child: CircleAvatar(
-        backgroundImage: NetworkImage("https://images.pexels.com/photos/15355037/pexels-photo-15355037/free-photo-of-bowl-of-soup-with-noodles-and-shrimps.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"),
-        backgroundColor: Colors.teal,
-        radius: 50,
-        child: Text("Health",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize:20,)),
+      child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CategoryDetailsPage(category: x),
+            ),
+          );
+        },
+        child: CircleAvatar(
+          backgroundImage: NetworkImage(x.image),
+          backgroundColor: Colors.teal,
+          radius: 50,
+          child: Text(
+            x.title,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              fontSize: 20,
+            ),
+          ),
+        ),
       ),
     );
   }
